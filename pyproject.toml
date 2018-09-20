@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "aula03"
+version = "0.1.1"
+description = ""
+authors = ["Cassio Silva <cassio.silva@entelgy.com>"]
+
+[tool.poetry.dependencies]
+python = "3.7"
+flask = "^1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+ipython = "^6.5"
