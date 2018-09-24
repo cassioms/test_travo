@@ -9,8 +9,8 @@ class User:
         {'lower': 35.0, 'upper': 39.99, 'situation': 'Obesidade II (severa)', 'level': 4},
         {'lower': 40.0, 'upper': 200.0, 'situation': 'Obesidade III (mórbida)', 'level': 6},
     ]
-
-
+    
+    
     def __init__(self, user):
         self.id = user['id']
         self.name = user['name']
@@ -47,7 +47,6 @@ class User:
             'situation': self.situation,
             'level': self.level
         }
-
 
     def update(self):
         self.imc = self.get_imc()
