@@ -3,5 +3,18 @@ language: python
 python:
   - "3.7-dev"
 
-script:
-  pytest
+stages:
+  - cassius
+  - test
+  - end
+
+jobs:
+  include:
+    - stage: cassius
+    - script: pytest
+
+    - stage: test
+    - script: pytest
+
+    - stage: end
+    - script: echo 'Done'
