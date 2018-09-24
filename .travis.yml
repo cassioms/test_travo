@@ -4,17 +4,20 @@ python:
   - "3.7-dev"
 
 stages:
-  - cassius
+  - pre-test
   - test
   - end
 
 jobs:
   include:
-    - stage: cassius
-      script: pytest
+    - stage: pre-test
+      name: 'Pre testing'
+      script: echo 'Preparing for test'
 
     - stage: test
+      name: 'Test'
       script: pytest
 
-    - stage: end
-      script: echo 'Done'
+    - stage: deploy
+      name: 'Deploy'
+      script: echo 'Deploying...'
