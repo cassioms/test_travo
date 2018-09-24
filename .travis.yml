@@ -10,11 +10,11 @@ stages:
 
 jobs:
   include:
-    - script: pytest
     - stage: cassius
+      script: pytest
 
-    - script: pytest
     - stage: test
+      script: pytest
 
-    - script: echo 'Done'
     - stage: end
+      script: echo 'Done'
